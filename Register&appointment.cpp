@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-// class for dental clinic system to handle register and booking pages
-class DentalClinic {
-private:
-    // private data members for register page
+// =========================================================
+// 1. MODEL: strictly holds your original data and constructor
+// =========================================================
+class DentalModel {
+public:
+    // your exact private data members (made public here so controller can access them)
     char regUser[50];
     char regPass[50];
-    int accountFlag; // 0 means no account, 1 means registered
+    int accountFlag; 
 
-    // private data members for book appointment page
     char patientName[50];
     char bookDate[50];
     char bookTime[50];
 
-public:
-    // constructor to initialize object attributes in memory
-    DentalClinic() {
+    // your exact constructor to initialize attributes
+    DentalModel() {
         accountFlag = 0;
         regUser[0] = '\0';
         regPass[0] = '\0';
@@ -24,8 +24,31 @@ public:
         bookDate[0] = '\0';
         bookTime[0] = '\0';
     }
+};
 
-    // method to show and handle register page
+// =========================================================
+// 2. VIEW: strictly handles the main interface menu screen
+// =========================================================
+class DentalView {
+public:
+    // your exact main menu screen from main function
+    void showMenu() {
+        cout << "\nMenu:" << endl;
+        cout << "1. Register" << endl;
+        cout << "2. Book Appointment" << endl;
+        cout << "3. Exit" << endl;
+    }
+};
+
+// =========================================================
+// 3. CONTROLLER: contains your exact original methods and loops
+// =========================================================
+class DentalController {
+private:
+    DentalModel model; // object composition to hold data state
+
+public:
+    // your exact method to show and handle register page
     void showRegister() {
         cout << "\nRegister Page" << endl;
         
@@ -37,32 +60,32 @@ public:
         cout << "Enter password: ";
         cin >> inputPass;
 
-        // manual string copy for username
+        // your exact manual string copy for username
         int i = 0;
         while (inputUser[i] != '\0') {
-            regUser[i] = inputUser[i];
+            model.regUser[i] = inputUser[i]; // reads and writes directly using model object
             i++;
         }
-        regUser[i] = '\0';
+        model.regUser[i] = '\0';
 
-        // manual string copy for password
+        // your exact manual string copy for password
         int j = 0;
         while (inputPass[j] != '\0') {
-            regPass[j] = inputPass[j];
+            model.regPass[j] = inputPass[j];
             j++;
         }
-        regPass[j] = '\0';
+        model.regPass[j] = '\0';
 
-        accountFlag = 1; // account is now saved and active
+        model.accountFlag = 1; // account is now saved and active
         cout << "Registration successful!" << endl;
     }
 
-    // method to show and handle book appointment page
+    // your exact method to show and handle book appointment page
     void showBooking() {
         cout << "\nBook Appointment Page" << endl;
 
         // check business logic if user has registered first
-        if (accountFlag == 0) {
+        if (model.accountFlag == 0) {
             cout << "Error: You must register first!" << endl;
             return;
         }
@@ -75,22 +98,22 @@ public:
         cout << "Confirm password: ";
         cin >> checkPass;
 
-        // manual string comparison for username
+        // your exact manual string comparison for username
         int i = 0;
         int userMatch = 1; // 1 means match, 0 means mismatch
-        while (checkUser[i] != '\0' || regUser[i] != '\0') {
-            if (checkUser[i] != regUser[i]) {
+        while (checkUser[i] != '\0' || model.regUser[i] != '\0') {
+            if (checkUser[i] != model.regUser[i]) {
                 userMatch = 0;
                 break;
             }
             i++;
         }
 
-        // manual string comparison for password
+        // your exact manual string comparison for password
         int j = 0;
-        int passMatch = 1;
-        while (checkPass[j] != '\0' || regPass[j] != '\0') {
-            if (checkPass[j] != regPass[j]) {
+        int passMatch = 1; // 1 means match, 0 means mismatch
+        while (checkPass[j] != '\0' || model.regPass[j] != '\0') {
+            if (checkPass[j] != model.regPass[j]) {
                 passMatch = 0;
                 break;
             }
@@ -102,13 +125,13 @@ public:
             cout << "Login successful. Enter appointment details:" << endl;
             
             cout << "Patient Name: ";
-            cin >> patientName;
+            cin >> model.patientName;
             cout << "Date (YYYY-MM-DD): ";
-            cin >> bookDate;
+            cin >> model.bookDate;
             cout << "Time (e.g. 05:00PM): ";
-            cin >> bookTime;
+            cin >> model.bookTime;
 
-            cout << "Appointment booked successfully for " << patientName << endl;
+            cout << "Appointment booked successfully for " << model.patientName << endl;
         } 
         else {
             cout << "Error: Invalid credentials!" << endl;
@@ -116,15 +139,16 @@ public:
     }
 };
 
+// =========================================================
+// MAIN FUNCTION: drive system control
+// =========================================================
 int main() {
-    DentalClinic clinic; // object instantiation from the class
+    DentalController clinic; // object instantiation from the controller class
+    DentalView view;         // object instantiation from the view class
     int choice;
 
     do {
-        cout << "\nMenu:" << endl;
-        cout << "1. Register" << endl;
-        cout << "2. Book Appointment" << endl;
-        cout << "3. Exit" << endl;
+        view.showMenu(); // method invocation for menu display layer
         cout << "Choice: ";
         cin >> choice;
 
@@ -138,3 +162,4 @@ int main() {
 
     return 0;
 }
+            
