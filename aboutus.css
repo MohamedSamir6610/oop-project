@@ -6,29 +6,33 @@
 }
 
 body {
-    background: #f5eee4;
-    color: #3b2618;
+    background: #f0f4f8;
+    color: #1a2a3a;
 }
 
 .navbar2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 35px;
+    padding: 0px 30px; 
     background-color: #ffffff;
     width: 100%;
-    min-height: 70px;
+    min-height: 60px; 
     box-sizing: border-box;
+    border-bottom: 2px solid #e2e8f0;
 }
 
-
-.logo h2 img {
-    width: 10%;
-    max-width: 26px;
-    border-radius: 18px;
-    object-fit: cover;
+.logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
+.logo-img {
+    height: 60px; 
+    width: auto;  
+    display: block;
+}
 
 .nav-links {
     display: flex;
@@ -39,27 +43,29 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #134d6e;
+    color: #4a5568;
     font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #0066cc; 
 }
 
 .login-btn {
     text-decoration: none;
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 8px 18px;
+    background-color: #0066cc;
     color: white;
-    border-radius: 50px;
+    border-radius: 30px; 
     white-space: nowrap;
     flex-shrink: 0;
+    font-weight: 500;
+    transition: 0.2s;
 }
 
 .login-btn:hover {
-    background: #ffcf9b;
-    color: #000;
-}
-.nav-links a:hover {
-    
-    color: #0d3fe3;
+    background-color: #004999;
 }
 
 .hero {
@@ -73,7 +79,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(0.6);
+    filter: brightness(0.75);
 }
 
 .hero-text {
@@ -83,7 +89,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     opacity: 0;
     animation: fadeUp 1s ease-out forwards;
 }
@@ -102,16 +108,14 @@ body {
     max-width: 1200px;
     margin: 50px auto 80px;
     padding: 45px 60px;
-    background: rgba(156, 75, 0, 0.171); 
+    background: #ffffff;
     border-radius: 24px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
     gap: 40px;
     align-items: center;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
-    color: #ffffff; 
-
+    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.05);
+    color: #4a5568; 
+    border: 1px solid #e2e8f0;
     opacity: 0;
     animation: fadeUp 1s ease-out forwards;
     animation-delay: 0.4s;
@@ -124,7 +128,7 @@ body {
 .about-text h2 {
     font-size: 26px;
     margin-bottom: 15px;
-    color: #007bff;
+    color: #0066cc;
     font-weight: 700;
 }
 
@@ -136,7 +140,7 @@ body {
 
 .read-btn {
     padding: 12px 35px;
-    background: #007bff; 
+    background: #00bfff;
     border-radius: 30px;
     color: #fff;
     border: none;
@@ -146,8 +150,8 @@ body {
 }
 
 .read-btn:hover {
-    background: #ffcf9b;
-    color: #000;
+    background: #0099cc;
+    color: #ffffff;
 }
 
 .hidden {
@@ -164,6 +168,7 @@ body {
     max-width: 260px;
     border-radius: 18px;
     object-fit: cover;
+    border: 3px solid #e2e8f0;
 }
 
 @keyframes fadeUp {
