@@ -3,29 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us | Seryana Clinic</title>
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="aboutus.css">
 </head>
 <body>
 
-    <div class="navbar2">
-        <div class="logo">
-            <img src="ff.jpeg" alt="Seryana Logo" class="logo-img">
-        </div>
-
-        <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="about.html" class="active">About us</a>
-            <a href="service.php">Service</a>
-            <a href="medicalrecord.php">Medical Record</a>
-            <a href="contactus.html">Contact us</a>
-             <a href="login.html">Log in</a>
-        </div>
-
-        <a href="log%20in%20.html" class="login-btn">Log in</a>
-    </div>
+    <?php include 'header.php'; ?>
     
     <section class="hero">
-        <img src="erick-tang-Of7fPGRSz_4-unsplash.jpg" alt="Coffee Beans">
+        <img src="erick-tang-Of7fPGRSz_4-unsplash.jpg" alt="Seryana Clinic">
         <div class="hero-text">
             <h1>WELCOME TO SERYANA CLINIC</h1>
             <p>Gentle care, professional doctors, and a bright smile made easy.</p>
@@ -52,7 +38,7 @@
         </div>
 
         <div class="about-image">
-            <img src="benyamin-bohlouli-hmVZ7StKY7I-unsplash.jpg" alt="Seryana Dental Clinic">
+            <img src="benyamin-bohlouli-hmVZ7StKY7I-unsplash.jpg" alt="Seryana Clinic Image">
         </div>
     </section>
 
