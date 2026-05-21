@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+
+  background-image: url('seryana.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+/* Login box */
+.login-box {
+  position: absolute;
+
+  /* مكان البوكس في نص اليمين الأبيض */
+  top: 37%;
+  right: 13%;
+
+  width: 380px;
+
+  background: rgba(173, 216, 230, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 18px;
+
+  padding: 28px 32px 24px;
+
+  text-align: center;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.login-box h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #18385f;
+  margin-bottom: 24px;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 46px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 30px;
+
+  padding: 0 24px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #18385f;
+}
+
+.input-group input::placeholder {
+  color: #7aa6c4;
+  font-weight: 500;
+}
+
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Remember + Forgot */
+.row-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 4px 0 18px;
+
+  font-size: 14px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #18385f;
+  cursor: pointer;
+}
+
+.remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: #1a6fc4;
+}
+
+.forgot {
+  color: #0b73c9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.btn-login {
+  width: 100%;
+  height: 46px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #18385f;
+
+  cursor: pointer;
+
+  margin-bottom: 18px;
+}
+
+.btn-login:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Register */
+.register-line {
+  font-size: 14px;
+  color: #18385f;
+}
+
+.register-line a {
+  color: #0b73c9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-line a:hover {
+  text-decoration: underline;
+}
