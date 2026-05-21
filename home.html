@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Seryana Dental Clinic | Home</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <div class="page-bg">
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+
+      <div class="welcome-box">
+
+        <h1>Welcome to Seryana Dental Clinic</h1>
+
+        <p>
+          Seryana Dental Clinic is owned by Dr. Somaya Mostafa,
+          Consultant of Oral and Dental Medicine at Al-Azhar University
+          and Lecturer in the Oral Biology Department at Al-Ahram University.
+        </p>
+
+        <p>
+          Our clinic is specialized in treating dental problems and providing
+          professional dental care in a calm, clean, and comfortable environment.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- Clinic Images -->
+    <section class="content-section">
+
+      <div class="section-title">
+        <h2>About Our Clinic</h2>
+        <p>Take a quick look at our clinic environment and dental care tools.</p>
+      </div>
+
+      <div class="cards-row">
+
+        <div class="image-card">
+          <img src="clinic-reception.jpg" alt="Seryana Dental Clinic Reception">
+          <h3>Modern Reception Area</h3>
+        </div>
+
+        <div class="image-card">
+          <img src="clinic-tools.jpg" alt="Dental Tools">
+          <h3>Professional Dental Tools</h3>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="content-section">
+
+      <div class="section-title">
+        <h2>Why Choose Us</h2>
+        <p>We care about your smile, comfort, and dental health.</p>
+      </div>
+
+      <div class="cards-row">
+
+        <div class="image-card">
+          <img src="teeth1.jpg" alt="Before and After Dental Cleaning">
+          <h3>Dental Cleaning Results</h3>
+          <p>
+            We help improve your dental health and appearance with careful
+            and professional treatment.
+          </p>
+        </div>
+
+        <div class="image-card">
+          <img src="theeth2.jpg" alt="Before and After Teeth Treatment">
+          <h3>Before & After Care</h3>
+          <p>
+            Our goal is to provide comfortable treatment and visible results
+            for different dental problems.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Buttons -->
+    <section class="buttons-section">
+
+      <button class="main-btn" onclick="showFAQs()">View FAQs</button>
+      <button class="second-btn" onclick="showReviews()">View Reviews</button>
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section hidden-section" id="faq">
+
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find quick answers to the most common questions about our clinic.</p>
+      </div>
+
+      <div class="faq-container">
+
+        <div class="faq-card">
+          <h3>Do you provide dental X-rays?</h3>
+          <button class="faq-btn" onclick="toggleAnswer(0)">Show Answer</button>
+          <p class="faq-answer">
+            No, we do not have an X-ray department inside the clinic.
+            Dental X-rays should be done outside the clinic.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>Where is your location?</h3>
+          <button class="faq-btn" onclick="toggleAnswer(1)">Show Answer</button>
+          <p class="faq-answer">
+            We are located in El Hosary, in front of El Hosary Mosque,
+            third floor, unit number 1.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>Do you accept children?</h3>
+          <button class="faq-btn" onclick="toggleAnswer(2)">Show Answer</button>
+          <p class="faq-answer">
+            Yes, we welcome children and patients of all ages.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-section hidden-section" id="reviews">
+
+      <div class="section-title">
+        <h2>Patient Reviews</h2>
+        <p>What our patients say about their experience.</p>
+      </div>
+
+      <div class="reviews-container">
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            The clinic is very clean and comfortable. The doctor is professional
+            and explains everything clearly.
+          </p>
+          <h4>Patient Review</h4>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Great service and friendly staff. I felt comfortable during my visit
+            and the treatment was very good.
+          </p>
+          <h4>Patient Review</h4>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Excellent experience. The clinic is organized, clean,
+            and suitable for all family members.
+          </p>
+          <h4>Patient Review</h4>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
